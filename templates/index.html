@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>College AI Assistant</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="college-logo">
+                🎓
+            </div>
+
+            <h2>College AI</h2>
+
+            <p class="subtitle">
+                Smart Campus Assistant
+            </p>
+
+            <div class="sidebar-line"></div>
+
+            <div class="menu-item active">
+                💬 Chat Assistant
+            </div>
+
+            <div class="menu-item">
+                📚 Courses
+            </div>
+
+            <div class="menu-item">
+                📝 Admissions
+            </div>
+
+            <div class="menu-item">
+                👨‍🏫 Departments
+            </div>
+
+            <div class="menu-item">
+                💼 Placements
+            </div>
+
+            <div class="menu-item">
+                🏫 Facilities
+            </div>
+
+            <div class="sidebar-bottom">
+
+                <p>Need help?</p>
+
+                <button>
+                    Contact College
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CHAT -->
+
+        <main class="chat-container">
+
+            <!-- HEADER -->
+
+            <header class="chat-header">
+
+                <div class="bot-profile">
+
+                    <div class="bot-avatar">
+                        🤖
+                    </div>
+
+                    <div>
+
+                        <h2>College AI Assistant</h2>
+
+                        <span>
+                            <i></i>
+                            Online & Ready to Help
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <button class="more-button">
+                    ⋮
+                </button>
+
+            </header>
+
+
+            <!-- CHAT AREA -->
+
+            <section id="chat-box" class="chat-box">
+
+                <div class="welcome">
+
+                    <div class="welcome-icon">
+                        👋
+                    </div>
+
+                    <h1>
+                        Welcome to College AI
+                    </h1>
+
+                    <p>
+                        I'm your smart college assistant.
+                        Ask me anything about admissions,
+                        courses, departments, placements and campus facilities.
+                    </p>
+
+                </div>
+
+
+                <!-- QUICK QUESTIONS -->
+
+                <div class="quick-questions">
+
+                    <button onclick="quickQuestion('What courses are available?')">
+                        🎓 Courses
+                    </button>
+
+                    <button onclick="quickQuestion('What is the admission process?')">
+                        📝 Admissions
+                    </button>
+
+                    <button onclick="quickQuestion('Tell me about placements')">
+                        💼 Placements
+                    </button>
+
+                    <button onclick="quickQuestion('What hostel facilities are available?')">
+                        🏠 Hostel
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- INPUT -->
+
+            <footer class="input-section">
+
+                <div class="input-container">
+
+                    <input
+                        type="text"
+                        id="user-input"
+                        placeholder="Ask anything about the college..."
+                        autocomplete="off"
+                    >
+
+                    <button
+                        class="send-button"
+                        onclick="sendMessage()"
+                    >
+                        ➤
+                    </button>
+
+                </div>
+
+                <p class="input-note">
+                    AI can make mistakes. Please verify important information.
+                </p>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
